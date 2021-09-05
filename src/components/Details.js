@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Icon, Image } from "semantic-ui-react";
+import { Card } from "semantic-ui-react";
 
 function Details({ hogDetails }) {
 	return (
@@ -9,6 +9,9 @@ function Details({ hogDetails }) {
 			</Card.Description>
 			<Card.Description>
 				{hogDetails.greased ? "Greased" : null}
+			</Card.Description>
+			<Card.Description>
+				"Highest medal achieved": {hogDetails["highest medal achieved"]}
 			</Card.Description>
 			<Card.Description>Weight: {hogDetails.weight}</Card.Description>
 		</>

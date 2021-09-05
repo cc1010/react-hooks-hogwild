@@ -1,9 +1,9 @@
 import React from "react";
 import { Button } from "semantic-ui-react";
 
-const GreasedButton = ({ GreasedFilter }) => (
+const GreasedButton = ({ GreasedFilter, greasedStatus }) => (
 	<Button size="large" onClick={GreasedFilter}>
-		Greased
+		{greasedStatus ? "Greased" : "not greased"}
 	</Button>
 );
 

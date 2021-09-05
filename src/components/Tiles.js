@@ -19,7 +19,7 @@ function Tiles({ hogs }) {
 	const renderHogs = hogs.filter((hog) => {
 		return greased ? hog.greased === true : hog;
 	});
-
+	/// Sorting algorithm
 	if (sort === "name") {
 		renderHogs.sort((a, b) => {
 			let fa = a.name.toLowerCase(),
@@ -44,7 +44,10 @@ function Tiles({ hogs }) {
 	return (
 		<div className="">
 			<div>
-				<GreasedButton GreasedFilter={GreasedFilter} />
+				<GreasedButton
+					GreasedFilter={GreasedFilter}
+					greasedStatus={greased}
+				/>
 			</div>
 			<div>
 				<SortButton sortHogs={sortHogs} />
